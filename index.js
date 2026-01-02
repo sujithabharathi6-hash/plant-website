@@ -85,6 +85,54 @@ function handleSearch() {
   }
 }
 
+/***********************
+ * HAMBURGER MENU
+ ***********************/
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+/* Close menu when clicking a nav link */
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
+
+/* Close menu when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  }
+});
+
+
+/***********************
+ * ADD TO CART (BASIC)
+ ***********************/
+let cart = [];
+
+function addToCart(productName, price) {
+  cart.push({ name: productName, price: price });
+
+  alert(`${productName} added to cart 🪴`);
+
+  console.log("Cart Items:", cart);
+}
+
+
+/***********************
+ * PAGE LOAD CHECK
+ ***********************/
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("PlantLand JS Loaded Successfully 🌿");
+});
 
 
 /* =============================
