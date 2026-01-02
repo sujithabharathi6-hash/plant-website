@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Collection - PlantLand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --accent-lime: #8db600;
+            --earth-brown: #5d4037;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Playfair Display", serif;
+            background-color: #fdfdfb;
+            overflow-x: hidden;
+        }
+
+        /* --- OUTDOOR HERO --- */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            animation: slideDown 1s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-top: 15px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        /* --- GARDEN GRID --- */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--earth-brown);
+        }
+
+        .plant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        /* --- CARD WITH SUNSHINE ANIMATION --- */
+           .anth-card {
+            background: var(--wax-white);
+            border-radius: 30px 5px 30px 5px; /* Asymmetric elegant corners */
+            overflow: hidden;
+            box-shadow: 0 10px 25px var(--soft-shadow);
+            transition: 0.5s;
+            position: relative;
+            border: 1px solid #eee;
+        }
+
+        .anth-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 35px rgba(183, 28, 28, 0.2);
+        }
+
+        /* Image Slide Animation */
+        .img-box {
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .anth-card:hover .img-box img {
+            transform: scale(1.1) translateX(10px);
+        }
+
+        /* Information Area */
+        .content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--jungle-green);
+            margin-bottom: 5px;
+        }
+
+        .type {
+            font-size: 0.8rem;
+            color: var(--anthurium-red);
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Pulse Button */
+        .buy-btn {
+            background: var(--anthurium-red);
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(183, 28, 28, 0.4);
+        }
+
+        .buy-btn:hover {
+            background: var(--jungle-green);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(27, 94, 32, 0.4);
+        }
+
+        /* Floating Back Nav */
+        
+        .back-nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--forest-deep);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+       <a href="index.html" class="back-nav"><i class="fa fa-leaf"></i> BACK TO SHOP</a>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Sun-Kissed Spaces</h1>
+            <p>Durable, vibrant, and hardy plants for your garden and balcony.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-header">
+            <h2>Outdoor Bestsellers</h2>
+            <p>Plants that thrive under the open sky</p>
+        </div>
+
+        <div class="plant-grid">
+            <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1599591453224-b1fcc11f930e?q=80&w=500" alt="Red Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">CLASSIC FLAMINGO</span>
+                    <h3>Ruby Red Heart</h3>
+                    <span class="price">Rs. 650.00</span>
+                 <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=500" alt="Pink Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">PASTEL ROMANCE</span>
+                    <h3>Blush Pink</h3>
+                    <span class="price">Rs. 720.00</span>
+                   <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1592150621344-82d43b4a230c?q=80&w=500" alt="White Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">PURE ELEGANCE</span>
+                    <h3>Snow White</h3>
+                    <span class="price">Rs. 580.00</span>
+                   <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1620959828551-7f9f7d2f9d5c?q=80&w=500" alt="Black Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">RARE LUXURY</span>
+                    <h3>Midnight Black</h3>
+                    <span class="price">Rs. 1,200.00</span>
+                    <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

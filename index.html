@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./index.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<title>Plant website</title>
+
+</head>
+<body>
+     <header class="navbar">
+  <div class="logo">
+    <img src="./logo.jpg" alt="logo">
+    <h2>PlantLand</h2>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+     <!-- PLANTS -->
+<div class="dropdown">
+      <button class="drop-btn" onclick="toggleDropdown(event, 'plantsDropdown')">
+        Plants <i class="fa fa-chevron-down"></i>
+      </button>
+      
+      <div class="dropdown-menu" id="plantsDropdown">
+        <a href="indoorplants.html">Indoor Plants</a> 
+        <a href="outdoor.html">Outdoor Plants</a>
+        <a href="flowering.html">Flowering Plants</a>
+        <a href="vegtables.html">Vegtables Plants</a>
+        <a href="tree.html">Tree</a>
+        <a href="aqatic.html">Aqatic</a>
+        <a href="creeper.html">Hanging & Creeper</a>
+        <a href="fruits.html">Fruits Plants</a>
+        <a href="cartons.html"> crotons</a>
+      </div>
+    </div>
+
+  <!-- POT PLANTS -->
+  <div class="dropdown">
+    <button class="drop-btn" onclick="toggleDropdown(event, 'potPlantsDropdown')">
+  Pot Plants <i class="fa fa-chevron-down"></i>
+</button>
+
+    <div class="dropdown-menu" id="potPlantsDropdown">
+      <a href="Adenium.html"> Adenium Pot Plants</a>
+      <a href="Anthurium.html">Anthurium Plants</a>
+      <a href="Caladium.html">Caladium Pot Plant</a>
+      <a href="Money Plant.html">Money Plant Pot</a>
+      <a href="Philodendron.html">Philodendron Pot Plants</a>
+  
+    </div>
+  </div>
+
+  <!-- PLANTERS -->
+  <div class="dropdown">
+ <button class="drop-btn" onclick="toggleDropdown(event, 'potPlantsDropdown')">
+ Planters <i class="fa fa-chevron-down"></i>
+</button>
+
+    <div class="dropdown-menu" id="plantersDropdown">
+      <a href="#">Black Grow Bags</a>
+      <a href="#">White Grow Bags</a>
+      <a href="#">Green Grow Bags</a>
+       <a href="ceramic.html">Ceramic Pots</a>
+      <a href="plastic.html">Plastic Pots</a>
+      <a href="hanging.html">Hanging Pots</a>
+    </div>
+  </div>
+
+  <!-- MORE -->
+  <div class="dropdown">
+    <button class="drop-btn" onclick="toggleDropdown(event, 'potPlantsDropdown')">
+  More <i class="fa fa-chevron-down"></i>
+</button>
+
+    <div class="dropdown-menu" id="moreDropdown">
+      <a href="#">About Us</a>
+      <a href="#">Pricing</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+    <!-- <button class="login-btn" id="loginBtn">Login</button> -->
+
+    <!-- Right Icons -->
+<div class="nav-icons">
+  <i class="fa fa-magnifying-glass" id="searchIcon"></i>
+  <div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" placeholder="Search plants, pots, planters..." id="searchInput">
+    <button id="closeSearch">&times;</button>
+  </div>
+</div>
+
+
+
+<!-- PROFILE ICON WITH DROPDOWN -->
+<div class="profile-wrapper">
+  <i class="fa-regular fa-user profile-icon" id="profileIcon"></i>
+
+  <div class="profile-dropdown" id="profileDropdown">
+    <a href="login.html">Login</a>
+  </div>
+</div>
+
+
+  <div class="icon-badge" id="wishlistIcon">
+  <i class="fa-regular fa-heart"></i>
+  <span class="badge" id="wishlistCount">0</span>
+</div>
+
+<div class="icon-badge" id="cartIcon">
+  <i class="fa-solid fa-bag-shopping"></i>
+  <span class="badge" id="cartCount">0</span>
+</div>
+
+
+  </nav>
+
+  <!-- Hamburger -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+
+   <!-- section-1  -->
+
+  <div class="section-1" id="Home">
+    <div class="left-content">
+        <p><span>-PLANTLAND-</span></p>
+        <h1>Make Your</h1>
+        <h1>Home Green</h1>
+        <p>Check out our store in New York with the best indoor & outdoor plants are suitable for growing exactly in your conditions.</p>
+
+        <div class="btn">
+            
+            <button class="left-btn">BEST PLANTS</button>
+            <button class="left-btn">LEARN MORE</button>
+    </div>
+
+    </div>
+    
+</div>
+
+<!-- about-section -->
+
+<section class="about-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h4 class="sub-title">-ABOUT US-</h4>
+            <h1>Fill Your Home and <br> Garden With Beautiful, <br> Green Plants!</h1>
+            <p>Our shop offers you to buy home plants to decorate your home or office. In our offline shop, you will find the best selection of flowers and evergreens at attractive prices.</p>
+            
+            <ul class="about-list">
+                <li><i class="fa-solid fa-leaf"></i> LARGE SELECTION OF DIFFERENT PLANTS</li>
+                <li><i class="fa-solid fa-leaf"></i> RELATED SERVICES AND HOME GOODS</li>
+            </ul>
+
+            <a href="shop.html" class="browse-btn">Browse Plants</a>
+        </div>
+
+        <div class="about-images">
+            <div class="img-card card-1">
+                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=500" alt="Nursery">
+            </div>
+            <div class="img-card card-2">
+                   <img src="./aimg11.webp"/>
+            </div>
+            <div class="img-card card-3">
+                  <img src="./aimg3.avif"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- section-2 -->
+<div class="section-2" id="Plants">
+<div class="cont">
+    <div class="card">
+      <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+      <h3>Soil for Plants</h3>
+      <p>It's not easy to find quality soil. We offer the best options for your plants, enriched with nutrients.</p>
+      <a href="#">LEARN MORE</a>
+    </div>
+
+    <div class="card">
+       <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+      <h3>Plant Food</h3>
+      <p>We offer everything you need to care for your plants — fertilizers and medicinal products included.</p>
+      <a href="#">LEARN MORE</a>
+    </div>
+
+    <div class="card">
+    <div class="icon"><i class="fa-solid fa-seedling"></i></div>
+      <h3>Consultations</h3>
+      <p>We not only sell plants but also help you choose and care for them. Ask us anything!</p>
+      <a href="#">LEARN MORE</a>
+    </div>
+
+    <div class="card">
+      <div class="icon"><i class="fa-solid fa-leaf"></i></div>
+      <h3>Plants for Home</h3>
+      <p>We offer a huge selection of flowers and evergreens that will be a joy to see for many years.</p>
+      <a href="#">LEARN MORE</a>
+    </div>
+  </div>
+</div>
+
+<!-- section-4 -->
+
+<div class="section-4" id="Pricing" >
+<div class="offer">
+    <p>-What we offer-</p>
+    <h1>Our Plants</h1>
+  <h5>We sell both indoor and outdoor varieties of plants.</h5>
+<div class="overall-card">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="./in-1.webp" alt="Avatar" style="width:285px;height:400px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Indoor Plant</h1> 
+      <p>Indoor plants are cultivated in homes and buildings to improve aesthetics, air quality, and humidity levels, while also boosting mental well-being through stress reduction and providing a connection to nature. </p> 
+     
+    </div>
+  </div>
+</div>
+<div class="flip-card1">
+  <div class="flip-card-inner1">
+    <div class="flip-card-front1">
+      <img src="./out-1.jpg" alt="Avatar" style="width:285px;height:400px;">
+    </div>
+    <div class="flip-card-back1">
+      <h1>Outdoor Plant</h1> 
+      <p>For a sunny, high-heat spot, choose hardy plants like Bougainvillea, Aloe Vera, or Hibiscus; for a shaded balcony, opt for low-maintenance plants such as Money Plant, Areca Palm, or Snake Plant, while Petunias, Geraniums, and Hostas are great all-around garden performers.  </p> 
+     
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="faq">
+    <div class="faq-left">
+        <img src="./left-img.png"/>
+    </div>
+    <div class="faq-right">
+            <p><span>-FAQ-</span></p>
+    <h1>Have a Question?</h1>
+<p>We are happy to answer any question! Come to our store or leave your question in the contact form!</p>
+<div class="question">
+
+  <div class="faq-item">
+    <h3>Do you sell trees? <span>&#11167;</span></h3>
+    <div class="faq-answer">
+      <p>Yes, we sell indoor and outdoor trees including palms and evergreens.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I buy already grown-up plants? <span>&#11167;</span></h3>
+    <div class="faq-answer">
+      <p>Yes, fully grown plants are available in selected categories.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can I buy plants online? <span>&#11167;</span></h3>
+    <div class="faq-answer">
+      <p>Yes, online ordering is available with home delivery.</p>
+    </div>
+  </div>
+
+</div>
+
+<button>Contact Us</button>
+        </div>    
+</div>
+<div class="full-green">
+    <div class="green">
+<div class="one"> <h2>120+</h2>
+    <p>FLOWERS</p>
+</div>
+  <div class="two">
+       <h2>239+</h2>
+     <p>EVERGREENS</p>
+  </div>
+      <div class="three">
+        <h2>148+</h2>
+      <p>SUCCULENTS</p>
+      </div>
+       <div class="four">
+        <h2>150+</h2>
+       <p>PALM TREES</p>
+       </div>
+       </div>
+</div>
+
+
+<video src="./plant-video.mp4" autoplay="" muted=""></video>
+
+<div class="price-section">
+    <div class="pricing">
+    <p><span>-PRICING-</span></p>
+    <h1>Best Prices for Plants</h1>
+    <p>We offer affordable and prices for flowers, indoor and outdoor plants.</p>
+   </div>
+   
+   <div class="box-cont">
+    <div class="boxes">
+      <p class="price">from <span>$20</span></p>
+      <h2>Small plants</h2>
+      <ul>
+        <li>Money Plant</li>
+        <li>Bryophyllum</li>
+        <li>Philodendron</li>
+      </ul>
+      <a href="#" class="btnn">CUSTOM ORDER</a>
+    </div>
+
+    <div class="boxes">
+      <p class="price">from <span>$30</span></p>
+      <h2>Succulents</h2>
+      <ul>
+        <li>Graptosedum</li>
+        <li>Elephant bush</li>
+        <li>Crassula ovata</li>
+      </ul>
+      <a href="#" class="btnn">CUSTOM ORDER</a>
+    </div>
+
+    <div class="boxes">
+      <p class="price">from <span>$20</span></p>
+      <h2>Trees</h2>
+      <ul>
+        <li>Raphis Palm</li>
+        <li>Cedar pine</li>
+        <li>Thuja</li>
+      </ul>
+      <a href="#" class="btnn">CUSTOM ORDER</a>
+    </div>
+
+    <div class="boxes">
+      <p class="price">from <span>$25</span></p>
+      <h2>Big plants</h2>
+      <ul>
+        <li>Dracaena</li>
+        <li>Dieffenbachia</li>
+        <li>Rubber Tree</li>
+      </ul>
+      <a href="#" class="btnn">CUSTOM ORDER</a>
+    </div>
+  </div>
+  </div>
+
+  <!-- Testimonials-section -->
+
+<div class="Testimonals" id="Test">
+  <div class="test-left">
+    <p><span>-KIND WORDS-</span></p>
+ <h1>Testimonals</h1>
+ <p>our main task is to help you make sure that your home is always full of greenery, oxygen and comfort!</p>
+<div class="people">
+  <div class="test-img1">
+     <img src="./dani.webp"/>
+    <h3>Dani Samston</h3>
+    <p>"I bought flowers to decorate our home 3 years ago in this store. All plants still live and bloom. We buy all fertilizers  for them only PlantLand."</p>
+ 
+</div>
+ <div class="test-img1">
+  <img src="./linda.webp"/>
+  <h3>Linda</h3>
+  <p>"Thank you so much for helping me take care of my home floer garden. PlantLand sells excellent fertilizers  and quantity solution for pest control."</p>
+  
+</div>
+ <div class="test-img1">
+    <img src="./sandy.webp"/>
+  <h3>Sandy Johnson</h3>
+  <p>"I bought trees and shrubs here for my home garden. Surprisingly, all plants took root. There were no problems at all with their planting and cultivation."</p>
+
+</div>
+  </div>
+</div>
+<div class="right-test">
+  <img src="./test.webp"/>
+</div>
+</div>
+
+<!-- another green section -->
+
+
+
+<div class="green-two">
+    <div class="green-2">
+<h1>Want to Visit Our Greenhouse?</h1>
+<h3>Call us +1 (234) 567 89 00</h3>
+</div>
+</div>
+
+<!-- map section -->
+
+
+
+      
+
+<!-- 
+    <div class="maping">
+  
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.936141089071!2d-73.98513528459243!3d40.74881717932724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18b8e7bb%3A0x77ce0a37f239d270!2s350%205th%20Ave%2C%20New%20York%2C%20NY%2010118%2C%20USA!5e0!3m2!1sen!2sin!4v1657901605636!5m2!1sen!2sin"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</div> -->
+  <!-- ===== Footer Section ===== -->
+  <footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- MENU -->
+    <div class="footer-col">
+    <h4 class="footer-title">MENU</h4>
+      <ul class="footer-content">
+        <li>Shop All</li>
+        <li>Plants</li>
+        <li>Pots</li>
+        <li>Tools & Accessories</li>
+        <li>Hire A Gardener</li>
+        <li>Contact</li>
+        <li>Locate Shop</li>
+      </ul>
+    </div>
+
+    <!-- LOCATIONS -->
+    <div class="footer-col">
+      <h4 class="footer-title">Velachery</h4>
+      <p>4/2, Anand Garden, 100Ft Road,<br>Velachery, Chennai 600042</p>
+
+      <h4 class="mt">Medavakkam</h4>
+      <p>222/9, Medavakkam Main Rd,<br>Chennai 600117</p>
+
+      <h4 class="mt">T.Nagar</h4>
+      <p>70/2, S Usman Road,<br>T.Nagar, Chennai</p>
+    </div>
+
+    <!-- POLICY -->
+    <div class="footer-col">
+      <h4 class="footer-title">POLICY</h4>
+      <ul class="footer-content">
+        <li>Shipping & Returns</li>
+        <li>Store Policy</li>
+        <li>Payment Methods</li>
+        <li>FAQ</li>
+        <li>Contact</li>
+        <li>Terms & Conditions</li>
+        <li>About Us</li>
+      </ul>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <div class="footer-col">
+      <h4 class="footer-title">Join Our Mailing List</h4>
+      <p class="offer">
+        GET Free Delivery on orders above Rs.499* <br>
+        Get quality plants on all your orders.
+      </p>
+
+      <label>Email Address *</label>
+      <div class="newsletter">
+        <input type="email" placeholder="Enter email">
+        <button>Submit</button>
+      </div>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="footer-col">
+      <h4 class="footer-title">SOCIAL</h4>
+      <ul class="footer-content">
+        <li>Twitter</li>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>Pinterest</li>
+        <li>TikTok</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 PlantLand. All Rights Reserved.
+  </div>
+</footer>
+
+
+
+
+ <script src="index.js"></script>
+
+</body>
+</html>

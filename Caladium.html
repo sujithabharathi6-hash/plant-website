@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart of the Jungle - Caladiums</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;500;700&family=Lusitana:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+            :root {
+    --anthurium-red: #b71c1c;
+    --jungle-green: #1b5e20;
+    --wax-white: #fafafa;
+    --soft-shadow: rgba(0,0,0,0.1);
+  
+    --desert-green: #8bc34a; 
+    --leaf-green: #2e7d32;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--mist-green);
+            color: var(--forest-deep);
+            overflow-x: hidden;
+        }
+
+        /* --- CALADIUM HERO --- */
+        .caladium-hero {
+            height: 45vh;
+            background: linear-gradient(rgba(6, 78, 59, 0.7), rgba(22, 101, 52, 0.4)), 
+                        url('https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+            margin-bottom: 40px;
+        }
+
+        .caladium-hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            animation: slideDown 1.2s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* --- GRID ALIGNMENT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .caladium-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        /* --- CARD STYLES --- */
+       
+        .anth-card {
+            background: var(--wax-white);
+            border-radius: 30px 5px 30px 5px; /* Asymmetric elegant corners */
+            overflow: hidden;
+            box-shadow: 0 10px 25px var(--soft-shadow);
+            transition: 0.5s;
+            position: relative;
+            border: 1px solid #eee;
+        }
+
+        .anth-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 35px rgba(183, 28, 28, 0.2);
+        }
+
+        /* Image Slide Animation */
+        .img-box {
+            height: 320px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .anth-card:hover .img-box img {
+            transform: scale(1.1) translateX(10px);
+        }
+
+        /* Information Area */
+        .content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--jungle-green);
+            margin-bottom: 5px;
+        }
+
+        .type {
+            font-size: 0.8rem;
+            color: var(--anthurium-red);
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Pulse Button */
+          button {
+    background: var(--desert-green); 
+    color: white; /* Changed to white for better readability on green */
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: var(--leaf-green); /* This will now work! */
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.4);
+}
+
+        /* Floating Back Nav */
+        
+        .back-nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: white;
+            padding: 8px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--forest-deep);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-nav"><i class="fa fa-leaf"></i> BACK TO SHOP</a>
+
+    <header class="caladium-hero">
+        <h1>Caladium Hearts</h1>
+        <p>Discover the vibrant patterns and lush green foliage of tropical Caladiums.</p>
+    </header>
+
+    <div class="container">
+        <div class="caladium-grid">
+            
+            <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfH_iNZuxX21stp0SaczjHAB157RI1gQM8XQ&s" alt="Red Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">CLASSIC FLAMINGO</span>
+                    <h3>Ruby Red Heart</h3>
+                    <span class="price">Rs. 650.00</span>
+                 <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_rEfQXgAawyfeLibT15NOoFst5Uu1S88aXA&s" alt="Pink Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">PASTEL ROMANCE</span>
+                    <h3>Blush Pink</h3>
+                    <span class="price">Rs. 720.00</span>
+                   <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUkliOlcmIT9djFzd8xz_9XXe8PBsNPsq94A&s" alt="White Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">PURE ELEGANCE</span>
+                    <h3>Snow White</h3>
+                    <span class="price">Rs. 580.00</span>
+                   <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR7q3vVwPR7v8fx-Os73M5FZnHNPEWrlesqA&s" alt="Black Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">RARE LUXURY</span>
+                    <h3>Midnight Black</h3>
+                    <span class="price">Rs. 1,200.00</span>
+                    <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+             <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwqUoNUX7mtAHQDRf2Cu8R0UVAGCooOXt3QA&s" alt="Black Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">RARE LUXURY</span>
+                    <h3>Midnight Black</h3>
+                    <span class="price">Rs. 1,200.00</span>
+                    <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+             <div class="anth-card">
+                <div class="img-box">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9wHhRuByYMzTUS_7cBdrb68p_B82a9Ipzpw&s" alt="Black Anthurium">
+                </div>
+                <div class="content">
+                    <span class="type">RARE LUXURY</span>
+                    <h3>Midnight Black</h3>
+                    <span class="price">Rs. 1,200.00</span>
+                    <button onclick="addToCart('Double Petal', 550.00)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
